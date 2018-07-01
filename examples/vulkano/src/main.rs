@@ -139,7 +139,7 @@ fn main() {
             position: (f32, f32),
             // normal: (f32, f32)
         }
-        impl_vertex!(Vertex, position);
+        impl_vertex!(Vertex, position/*, normal*/);
 
         let mut mesh = Vec::new();
 
@@ -166,12 +166,11 @@ fn main() {
         //     .expect("failed to create buffer")
     };
 
-    let indices = geometry.indices.iter().clone();
-    let index_buffer = vulkano::buffer::cpu_access::CpuAccessibleBuffer::from_iter(
-        device.clone(),
-        vulkano::buffer::BufferUsage::all(),
-        indices,
-    ).expect("failed to create buffer");
+    // let index_buffer = vulkano::buffer::cpu_access::CpuAccessibleBuffer::from_iter(
+    //     device.clone(),
+    //     vulkano::buffer::BufferUsage::all(),
+    //     geometry.indices.iter().clone(),
+    // ).expect("failed to create buffer");
 
     mod vs {
         #[derive(VulkanoShader)]
