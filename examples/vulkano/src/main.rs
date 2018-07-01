@@ -145,7 +145,7 @@ fn main() {
 
         for n in geometry.vertices {
             mesh.push(Vertex {
-                position: (n.position.x / 100.0, n.position.y / 100.0),
+                position: (n.position.x / dimensions[0] as f32, n.position.y / dimensions[1] as f32),
                 // normal: (n.normal.x / 100.0, n.normal.y / 100.0)
             });
         }
