@@ -153,17 +153,6 @@ fn main() {
 
         CpuAccessibleBuffer::from_iter(device.clone(), BufferUsage::all(), mesh.iter().cloned())
             .expect("failed to create buffer")
-
-        // #[derive(Debug, Clone)]
-        // struct Vertex { position: (f32, f32) }
-        // impl_vertex!(Vertex, position);
-
-        // CpuAccessibleBuffer::from_iter(device.clone(), BufferUsage::all(), [
-        //     Vertex { position: (-100.0, -25.0) },
-        //     Vertex { position: (100.0, 25.0) },
-        //     Vertex { position: (100.0, -25.0) }
-        // ].iter().cloned())
-        //     .expect("failed to create buffer")
     };
 
     // let index_buffer = vulkano::buffer::cpu_access::CpuAccessibleBuffer::from_iter(
