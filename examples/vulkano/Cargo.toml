@@ -1,0 +1,19 @@
+[package]
+name = "vulkano"
+version = "0.1.0"
+workspace = "../.."
+
+[[bin]]
+name = "vulkano_renderer"
+path = "src/main.rs"
+
+[dependencies]
+lyon = { path = "../../", features = ["extra"] }
+
+vulkano = { git = "https://github.com/vulkano-rs/vulkano", path = "./vulkano" }
+vulkano-shader-derive = { git = "https://github.com/vulkano-rs/vulkano", path = "./vulkano-shader-derive" }
+vulkano-win = { git = "https://github.com/vulkano-rs/vulkano", path = "./vulkano-win" }
+
+winit= "0.16.0"
+
+
